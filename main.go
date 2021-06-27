@@ -72,7 +72,7 @@ func main() {
 	})
 	mutex := sync.Mutex{}
 	log.Default().Println("Scrapping Started")
-	// loadCompany(db)
+	loadCompany(db)
 	c.OnHTML(".table.table-condensed.table-hover tbody", func(e *colly.HTMLElement) {
 		log.Println("Table Found")
 		var wg sync.WaitGroup
